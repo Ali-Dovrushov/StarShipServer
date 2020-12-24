@@ -4,7 +4,7 @@ const Server = require('./Server');
 function init() {
     const port = 5050 || process.env.PORT;
 
-    const app = new App(db);
+    const app = new App();
     const server = new Server(port, app)
 
     server.start();
