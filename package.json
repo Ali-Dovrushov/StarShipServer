@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ali-Dovrushov/StarShip.git"
+    "url": "https://github.com/Ali-Dovrushov/StarShipServer.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ali-Dovrushov/StarShip/issues"
+    "url": "https://github.com/Ali-Dovrushov/StarShipServer.git/issues"
   },
-  "homepage": "https://github.com/Ali-Dovrushov/StarShip#readme",
+  "homepage": "https://github.com/Ali-Dovrushov/StarShipServer.git#readme",
   "dependencies": {
     "@babel/core": "7.7.4",
     "@babel/plugin-proposal-class-properties": "7.7.4",
