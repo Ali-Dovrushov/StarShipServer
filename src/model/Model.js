@@ -1,23 +1,16 @@
 class Model {
     constructor() {
-        this._users = [
-            {
-                userName: 'User',
-                message: 'Massage',
-            }
-        ]
+        this._messages = []
 
         this.logedUsers = [
             "Qatix", "matix", "debil"
         ]
     }
 
-    getUsers = () => this._users;
+    getMessages = () => this._messages;
 
-    getLogedUsers = () => this.logedUsers
-
-    saveNewUser = newUserMessage => {
-        this._users.push(newUserMessage);
+    addNewMessage = newMessage => {
+        this._messages.push(newMessage);
     }
 
     deleteUser = user => {
@@ -25,14 +18,11 @@ class Model {
        if (index > -1) {
            this.logedUsers.splice(index, 1)
        }
-       return this.logedUsers;
     }
 
-    addUser = user => {
-        if (this.logedUsers.includes(user)) {
-            return this.logedUsers
-        } else {
-            this.logedUsers.push(user)
+    addUserToDb = user => {
+        if (!this.logedUsers.includes(user)) {
+            this.logedUsers.push(user);
         }
     }
 }

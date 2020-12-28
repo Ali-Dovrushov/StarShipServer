@@ -8,36 +8,35 @@ class App {
         this._app.use(express.json());
         this._app.use('/', express.static(path.resolve(__dirname, '../public')));
 
-        this._app.get('/getUserData', this.getUserName);
-        this._app.post('/userMessage', this.userMessage);
-        this._app.delete('deleteUserName', this.deleteUserName);
-        this._app.post('addUseName', this.addUserName)
-
+        this._app.get('/getAllMessages', this.getAllMessages);
+        this._app.post('/addMessage', this.addMessage);
+        this._app.post('/LogIn', this.logIn);
+        this._app.delete('/deleteUser', this.deleteUser);
     }
 
-    getUserName = (req, res) => {
-        // const users = this._db.getUsers();
-        const logUs = this._db.getLogedUsers();
-        // res.send(users);
-        res.send(logUs);
+    getAllMessages = (req, res) => {
+        const messages = this._db.getMessages();
+
+        res.send(messages);
+        res.end()
     }
 
-    userMessage = (req, res) => {
+    addMessage = (req, res) => {
         const { body } = req;
 
-        this._db.saveNewUser(body);// our object in place of body
+        this._db.addNewMessage(body);
     }
 
-    deleteUserName = (req, res) => {
+    deleteUser = (req, res) => {
         const { body } = req;
 
-        this._db.deleteUser(body)
+        this._db.deleteUser(body);
     }
 
-    addUserName = (req, res) => {
+    logIn = (req, res) => {
         const { body } = req;
 
-        this._db.addUser(body)
+        this._db.addUserToDb(body);
     }
 
     getApp = () => this._app;
