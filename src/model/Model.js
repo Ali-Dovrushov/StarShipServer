@@ -3,7 +3,7 @@ class Model {
         this._messages = []
 
         this.logedUsers = [
-            "Qatix", "matix", "debil"
+            "Qax", "max", "der"
         ]
     }
 
