@@ -18,26 +18,26 @@ class App {
         const messages = this._db.getMessages();
 
         res.send(messages);
-        res.end()
-    }
+        res.end();
+    };
 
     addMessage = (req, res) => {
         const { body } = req;
 
         this._db.addNewMessage(body);
-    }
+    };
 
     deleteUser = (req, res) => {
         const { body } = req;
 
         this._db.deleteUser(body);
-    }
+    };
 
     logIn = (req, res) => {
         const { body } = req;
 
         this._db.addUserToDb(body);
-    }
+    };
 
     getApp = () => this._app;
 }

@@ -9,10 +9,8 @@ class Server {
 
     start = () => {
         this._server.listen(this._port);
-        console.log(`Server is running on: ${this._port}`)
-    }
+        console.log(`Server is running on: ${this._port}`);
+    };
 }
 
 module.exports = Server;
-
-
