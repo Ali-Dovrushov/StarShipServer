@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://i.redd.it/qwd83nc4xxf41.jpg");
+  background-image: url('https://i.redd.it/qwd83nc4xxf41.jpg');
 }
 .auth-container__auth-form {
   height: 200px;
@@ -76,7 +76,7 @@ body {
   width: 400px;
   border-radius: 15px;
   box-shadow: 2px 5px 10px deepskyblue;
-  background-image: url("https://i.redd.it/qwd83nc4xxf41.jpg");
+  background-image: url('https://i.redd.it/qwd83nc4xxf41.jpg');
 }
 .chat-window__chat-form {
   text-align: center;

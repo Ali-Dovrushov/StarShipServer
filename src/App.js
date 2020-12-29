@@ -10,8 +10,8 @@ class App {
 
         this._app.get('/getAllMessages', this.getAllMessages);
         this._app.post('/addMessage', this.addMessage);
-        this._app.post('/LogIn', this.logIn);
-        this._app.delete('/deleteUser', this.deleteUser);
+        this._app.post('/logIn', this.logIn);
+        this._app.delete('/logOut', this.logOut);
     }
 
     getAllMessages = (req, res) => {
@@ -25,18 +25,21 @@ class App {
         const { body } = req;
 
         this._db.addNewMessage(body);
+        res.end();
     };
 
-    deleteUser = (req, res) => {
-        const { body } = req;
+    logOut = (req, res) => {
+        const { user } = req.body;
 
-        this._db.deleteUser(body);
+        this._db.deleteUserFromDb(user);
+        res.end();
     };
 
     logIn = (req, res) => {
-        const { body } = req;
+        const { user } = req.body;
 
-        this._db.addUserToDb(body);
+        res.send(this._db.addUserToDb(user));
+        res.end();
     };
 
     getApp = () => this._app;
