@@ -9,6 +9,7 @@ class Model {
 
     addNewMessage = newMessage => {
         this._messages.push(newMessage);
+        console.log(this._messages);
     };
 
     deleteUserFromDb = user => {

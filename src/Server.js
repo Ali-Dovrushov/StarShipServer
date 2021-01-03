@@ -22,8 +22,8 @@ class Server {
         this._clients.add(ws);
 
         ws.on('message', data => {
-            data = JSON.parse(data);
-            this._db.addNewMessage(data);
+            const msg = JSON.parse(data);
+            this._db.addNewMessage(msg);
             const messages = this._db.getMessages();
 
             for ( let client of this._clients) {
