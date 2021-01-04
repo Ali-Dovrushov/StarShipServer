@@ -1,7 +1,6 @@
 class Model {
     constructor() {
         this._messages = [];
-
         this.logedUsers = [];
     }
 
